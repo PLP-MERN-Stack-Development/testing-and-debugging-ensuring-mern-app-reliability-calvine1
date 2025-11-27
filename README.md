@@ -1,87 +1,26 @@
-# Testing and Debugging MERN Applications
+# MERN Testing & Debugging – Ensuring Reliability
 
-This assignment focuses on implementing comprehensive testing strategies for a MERN stack application, including unit testing, integration testing, and end-to-end testing, along with debugging techniques.
+This project has been configured to demonstrate reliable testing practices across both the **server (Express/MongoDB)** and **client (React)** sides of a MERN application. The setup uses **Jest** as the primary test runner, with **Supertest** and **MongoDB Memory Server** for backend integration tests, and **React Testing Library** with **Jest DOM** for frontend component testing. Cypress can be added for end‑to‑end flows.
 
-## Assignment Overview
+## 🔹 Testing Strategy
+- **Unit Tests (Client & Server):**
+  - Client: React components tested with `@testing-library/react` to validate rendering and user interactions.
+  - Server: Utility functions and controllers tested with Jest to ensure logic correctness.
+- **Integration Tests (Server):**
+  - API endpoints tested with Supertest against an in‑memory MongoDB instance for realistic database behavior.
+- **End‑to‑End Tests (Client):**
+  - Cypress can be used to simulate real user flows across the frontend and backend.
+- **Coverage Goals:**
+  - Global coverage threshold set to **70% statements, 70% functions, 70% lines, 60% branches**.
+  - Coverage reports generated in both text and HTML formats.
 
-You will:
-1. Set up testing environments for both client and server
-2. Write unit tests for React components and server functions
-3. Implement integration tests for API endpoints
-4. Create end-to-end tests for critical user flows
-5. Apply debugging techniques for common MERN stack issues
+## 🔹 Setup
+1. Clone the repository from GitHub Classroom.
+2. Install dependencies:
+   ```bash
+   cd server
+   npm install
+   cd ../client
+   npm install
 
-## Project Structure
-
-```
-mern-testing/
-├── client/                 # React front-end
-│   ├── src/                # React source code
-│   │   ├── components/     # React components
-│   │   ├── tests/          # Client-side tests
-│   │   │   ├── unit/       # Unit tests
-│   │   │   └── integration/ # Integration tests
-│   │   └── App.jsx         # Main application component
-│   └── cypress/            # End-to-end tests
-├── server/                 # Express.js back-end
-│   ├── src/                # Server source code
-│   │   ├── controllers/    # Route controllers
-│   │   ├── models/         # Mongoose models
-│   │   ├── routes/         # API routes
-│   │   └── middleware/     # Custom middleware
-│   └── tests/              # Server-side tests
-│       ├── unit/           # Unit tests
-│       └── integration/    # Integration tests
-├── jest.config.js          # Jest configuration
-└── package.json            # Project dependencies
-```
-
-## Getting Started
-
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week6-Assignment.md` file
-4. Explore the starter code and existing tests
-5. Complete the tasks outlined in the assignment
-
-## Files Included
-
-- `Week6-Assignment.md`: Detailed assignment instructions
-- Starter code for a MERN application with basic test setup:
-  - Sample React components with test files
-  - Express routes with test files
-  - Jest and testing library configurations
-  - Example tests for reference
-
-## Requirements
-
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Basic understanding of testing concepts
-
-## Testing Tools
-
-- Jest: JavaScript testing framework
-- React Testing Library: Testing utilities for React
-- Supertest: HTTP assertions for API testing
-- Cypress/Playwright: End-to-end testing framework
-- MongoDB Memory Server: In-memory MongoDB for testing
-
-## Submission
-
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
-
-1. Complete all required tests (unit, integration, and end-to-end)
-2. Achieve at least 70% code coverage for unit tests
-3. Document your testing strategy in the README.md
-4. Include screenshots of your test coverage reports
-5. Demonstrate debugging techniques in your code
-
-## Resources
-
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
-- [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
-- [Supertest Documentation](https://github.com/visionmedia/supertest)
-- [Cypress Documentation](https://docs.cypress.io/)
-- [MongoDB Testing Best Practices](https://www.mongodb.com/blog/post/mongodb-testing-best-practices) 
+   

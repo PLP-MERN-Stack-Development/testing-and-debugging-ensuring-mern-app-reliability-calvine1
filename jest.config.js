@@ -17,7 +17,7 @@ module.exports = {
         '!**/node_modules/**',
       ],
     },
-    
+
     // Client-side tests configuration
     {
       displayName: 'client',
@@ -26,7 +26,8 @@ module.exports = {
       moduleFileExtensions: ['js', 'jsx', 'json'],
       moduleNameMapper: {
         '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-        '\\.(jpg|jpeg|png|gif|webp|svg)$': '<rootDir>/client/src/tests/__mocks__/fileMock.js',
+        '\\.(jpg|jpeg|png|gif|webp|svg)$':
+          '<rootDir>/client/src/tests/__mocks__/fileMock.js',
       },
       setupFilesAfterEnv: ['<rootDir>/client/src/tests/setup.js'],
       transform: {
@@ -40,7 +41,7 @@ module.exports = {
       ],
     },
   ],
-  
+
   // Global configuration
   verbose: true,
   collectCoverage: true,
@@ -54,4 +55,4 @@ module.exports = {
     },
   },
   testTimeout: 10000,
-}; 
+};
